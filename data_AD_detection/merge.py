@@ -4,7 +4,7 @@ import requests
 
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-file_names = ["ACL_Anthology.csv", "Google_Scholar.csv", "IEEE_Xplore.csv", "PubMed.csv"]
+file_names = ["savedrecs.csv", "savedrecs_2.csv", "savedrecs_3.csv", "savedrecs_4.csv", "savedrecs_5.csv", "LRDetection.csv"]
 files = [os.path.join(script_dir, f) for f in file_names]
 
 
