@@ -39,8 +39,12 @@ These datasets are not openly available and require permission from TalkBank to 
 ```
 
 ## Additional Data Notes 
-- The data file used in the ADReSS experiments, data/raw/labels.tsv, can also be downloaded directly from the ADReSS Challenge website. 
-- The files manual_age_fix_pitt_ad.tsv and manual_age_fix_pitt_control.tsv were created to manually correct some age values in the Pitt dataset. They are based on the demographic spreadsheet containing all the participant data for the Pitt Corpus. These additions are optional, so the corresponding cells in the notebook can be skipped. 
+- The data file used in the ADReSS experiments, `data/raw/labels.tsv`, can also be downloaded directly from the ADReSS Challenge website. 
+- The files `manual_age_fix_pitt_ad.tsv` and `manual_age_fix_pitt_control.tsv` were created to manually correct some age values in the Pitt dataset. They are based on the demographic spreadsheet containing all the participant data for the Pitt Corpus. These additions are optional, so the corresponding cells in the notebook can be skipped. 
+- The project structure and code assume that the folders `ADReSS-IS2020-data/` and `Pitt/` are located in the **same directory as the project root**.
+- These datasets should be downloaded and placed manually as described in the [Datasets](#datasets) section.
+
+
 
 
 ## Create Environment 
@@ -57,11 +61,11 @@ Or using pip:
 
 Start by running preprocessing.ipynb, which cleans the raw transcripts, extracts features, and prepares the data for the pipeline.
 ## Running the code
-- ```project_config.py``` defines utility functions to dynamically resolve and manage file paths relative to the project root. 
-- Start by running ```preprocessing.ipynb```, which cleans the raw transcripts, extracts features, and prepares the data for the pipeline. 
+- `project_config.py` defines utility functions to dynamically resolve and manage file paths relative to the project root. 
+- Start by running `preprocessing.ipynb`, which cleans the raw transcripts, extracts features, and prepares the data for the pipeline. 
 - Then run either:
-    - ```adress_rf.ipynb``` for the ADReSS dataset, or
-    - ```pitt_rf.ipynb``` for the Pitt dataset. 
+    - `adress_rf.ipynb` for the ADReSS dataset, or
+    - `pitt_rf.ipynb` for the Pitt dataset. 
 
 These notebooks train a Random Forest model, evaluate its performance, analyse model explainability, and assess fairness across gender and age groups, including mitigation strategies. 
 
