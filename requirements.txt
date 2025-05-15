@@ -1,0 +1,12 @@
+geopandas==1.0.1
+joblib==1.4.2
+matplotlib==3.10.1
+matplotlib-inline==0.1.7
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.2.0
+seaborn==0.13.2
+shapely==2.0.7
+spacy-legacy==3.0.12
+spacy-loggers==1.0.5
+tqdm==4.67.1
