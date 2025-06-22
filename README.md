@@ -27,6 +27,7 @@ These datasets are not openly available and require permission from TalkBank to 
 │   ├── RoBERTa_pitt.ipynb
 │   ├── adress_rf.ipynb
 │   ├── pitt_rf.ipynb
+│   ├── report.ipynb
 │   └── preprocessing.ipynb
 ├── output
 │   ├── fairness
@@ -40,7 +41,8 @@ These datasets are not openly available and require permission from TalkBank to 
 │       ├── shap_adress
 │       └── shap_pitt
 ├── project_config.py
-└── requirements.txt
+├── roberta_requirements.txt
+└── rf_requirements.txt
 ```
 
 ## Additional Data Notes 
@@ -52,9 +54,30 @@ These datasets are not openly available and require permission from TalkBank to 
 
 
 
-## Create Environment 
+## Environment Setup
 
-To set up the environment, if you are using conda you can run the following in the terminal: 
+This project is designed to be run in 2 separate environments: one for the Random Forest model and one for the RoBERTa model, in order to avoid dependency conflicts. 
+
+### 1. Random Forest Env
+
+Used for:
+- `preprocessing.ipynb`
+- `adress_rf.ipynb`
+- `pitt_rf.ipynb`
+- `report_rf.ipynb`
+
+### 2. RoBERTa Env
+
+Used for:
+- `RoBERTa_adress.ipynb`
+- `RoBERTa_pitt.ipynb`
+
+Create and activate:
+```bash
+conda create -n rf python=3.9
+conda activate rf
+pip install -r rf_requirements.txt
+```
 
 ```conda env create -f environment.yml``` 
 
@@ -64,15 +87,20 @@ To set up the environment, if you are using conda you can run the following in t
 Or using pip:
 ```pip install -r requirements.txt``` 
 
-Start by running preprocessing.ipynb, which cleans the raw transcripts, extracts features, and prepares the data for the pipeline.
+Use ```roberta_requirements.txt``` to set up the environment for the RoBERTa models. 
+
 ## Running the code
+
 - `project_config.py` defines utility functions to dynamically resolve and manage file paths relative to the project root. 
 - Start by running `preprocessing.ipynb`, which cleans the raw transcripts, extracts features, and prepares the data for the pipeline. 
-- Then run either:
-    - `adress_rf.ipynb` for the ADReSS dataset, or
-    - `pitt_rf.ipynb` for the Pitt dataset. 
+- `report.ipynb` is used to create the table with the distribution of the dataset for the report of the thesis.
+- Then run either model:
+    - `adress_rf.ipynb` for the ADReSS dataset using Random Forest
+    - `pitt_rf.ipynb` for the Pitt dataset using Random Forest
+    - `RoBERTa_adress.ipynb` for the ADReSS dataset using RoBERTa
+    - `RoBERTa_pitt.ipynb` for the Pitt dataset using RoBERTa
 
-These notebooks train a Random Forest model, evaluate its performance, analyse model explainability, and assess fairness across gender and age groups, including mitigation strategies. 
+These notebooks train either a Random Forest model or a RoBERTa model, evaluate its performance, analyze model explainability, and assess fairness across gender and age groups, including mitigation strategies. 
 
 ## Project Goals
-This thesis explores and evaluates fairness of machine learning models in detecting Alzheimer’s Disease from speech data. It focus particularly on potential bias across gender and age groups. It also explores model explainability.  
+This thesis explores and evaluates fairness of machine learning models in detecting Alzheimer’s Disease from speech data. It focuses particularly on potential bias across gender and age groups. It also explores model explainability.
