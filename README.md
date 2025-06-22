@@ -13,6 +13,8 @@ These datasets are not openly available and require permission from TalkBank to 
 ## Repository Structure
 ```
 ├── ADReSS-IS2020-data
+├── Pitt
+├── README.md
 ├── data
 │   ├── features
 │   └── raw
@@ -21,6 +23,8 @@ These datasets are not openly available and require permission from TalkBank to 
 │       └── manual_age_fix_pitt_control.tsv
 ├── environment.yml
 ├── notebooks
+│   ├── RoBERTa_adress.ipynb
+│   ├── RoBERTa_pitt.ipynb
 │   ├── adress_rf.ipynb
 │   ├── pitt_rf.ipynb
 │   └── preprocessing.ipynb
@@ -29,12 +33,13 @@ These datasets are not openly available and require permission from TalkBank to 
 │   ├── models
 │   ├── plots
 │   ├── predictions
+│   ├── roberta
+│   │   ├── adress
+│   │   └── pitt
 │   └── shap
 │       ├── shap_adress
 │       └── shap_pitt
-├── Pitt
 ├── project_config.py
-├── README.md
 └── requirements.txt
 ```
 
@@ -70,4 +75,4 @@ Start by running preprocessing.ipynb, which cleans the raw transcripts, extracts
 These notebooks train a Random Forest model, evaluate its performance, analyse model explainability, and assess fairness across gender and age groups, including mitigation strategies. 
 
 ## Project Goals
-This thesis explores and evaluates fairness of machine learning models in detecting Alzheimer’s Disease from speech data. It focus particularly on potential bias across gender and age groups. It also explores model explainability. 
+This thesis explores and evaluates fairness of machine learning models in detecting Alzheimer’s Disease from speech data. It focus particularly on potential bias across gender and age groups. It also explores model explainability.  
