@@ -85,7 +85,7 @@ pip install -r rf_requirements.txt
 
 
 Or using pip:
-```pip install -r requirements.txt``` 
+```pip install -r requirements.txt``` # use the correct txt file, either rf_requirements or roberta_requirements
 
 Use ```roberta_requirements.txt``` to set up the environment for the RoBERTa models. 
 
