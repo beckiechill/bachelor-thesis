@@ -2,6 +2,9 @@
 
 This repository contains the codebase for the Bachelor Thesis by Rebeca Sanz titled **“Assessing Bias in Machine Learning Models for Alzheimer’s Disease Detection Across Gender and Age.”**
 
+## Project Goals
+This thesis explores and evaluates fairness of machine learning models in detecting Alzheimer’s Disease from speech data. It focuses particularly on potential bias across gender and age groups. It also explores model explainability.
+
 ## Datasets
 The datasets used are: 
 - DementiaBank Pitt Corpus Dataset provided by the TalkBank project: https://talkbank.org/
@@ -100,7 +103,4 @@ Use ```roberta_requirements.txt``` to set up the environment for the RoBERTa mod
     - `RoBERTa_adress.ipynb` for the ADReSS dataset using RoBERTa
     - `RoBERTa_pitt.ipynb` for the Pitt dataset using RoBERTa
 
-These notebooks train either a Random Forest model or a RoBERTa model, evaluate its performance, analyze model explainability, and assess fairness across gender and age groups, including mitigation strategies. 
-
-## Project Goals
-This thesis explores and evaluates fairness of machine learning models in detecting Alzheimer’s Disease from speech data. It focuses particularly on potential bias across gender and age groups. It also explores model explainability.
+These notebooks train either a Random Forest model or a RoBERTa model, evaluate its performance, analyze model explainability, and assess fairness across gender and age groups, including mitigation strategies.
